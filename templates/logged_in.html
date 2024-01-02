@@ -1,0 +1,54 @@
+
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='logged_in.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='dark-theme.css') }}">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Spotify</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+   <body>
+<!--      <iframe title="spotify_fun" width="100%" height="90%" src="https://app.powerbi.com/reportEmbed?reportId=35892b3c-481b-440e-89ea-18fb2c8338f2&autoAuth=true&ctid=7bfb4e31-83a0-4b4b-b857-b55dc346e778" frameborder="0" allowFullScreen="true"></iframe>-->
+<!--<iframe title="spotify_fun" width="100%" height="90%" src="https://app.powerbi.com/reportEmbed?reportId=c740e87a-ddc5-4bb3-8e24-21dac29ad203&autoAuth=true&ctid=7bfb4e31-83a0-4b4b-b857-b55dc346e778" frameborder="0" allowFullScreen="true"></iframe>-->
+<!-- Optional JavaScript -->
+
+<!--old working-->
+<!--<iframe title="spotify_fun" width="100%" height="90%" src="https://app.powerbi.com/reportEmbed?reportId=c740e87a-ddc5-4bb3-8e24-21dac29ad203&autoAuth=true&ctid=7bfb4e31-83a0-4b4b-b857-b55dc346e778" frameborder="0" allowFullScreen="true"></iframe>-->
+<!--new working    -->
+<iframe title="Report Section" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiMzVjNDhiMzgtMjZlNi00ZTE1LThhMTUtYjEyY2U3MzNhNDVlIiwidCI6IjdiZmI0ZTMxLTgzYTAtNGI0Yi1iODU3LWI1NWRjMzQ2ZTc3OCJ9" frameborder="0" allowFullScreen="true"></iframe>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const iframe = document.querySelector('iframe');
+        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+        const darkThemeStyles = `
+            body {
+                background-color: #1c1c1c;
+                color: #ffffff;
+            }
+            /* Add specific styles for other elements as needed */
+        `;
+
+        const styleElement = iframeDocument.createElement('style');
+        styleElement.innerHTML = darkThemeStyles;
+        iframeDocument.head.appendChild(styleElement);
+    });
+</script>
+   </body>
+</html>
